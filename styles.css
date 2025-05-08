@@ -186,6 +186,11 @@ body {
         font-size: 48px;
         line-height: 45px;
     }
+
+    .banner-content p {
+        font-size: 25px;
+        max-width: 680px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -205,6 +210,11 @@ body {
         transform: skewX(12deg);
     }
     
+    .banner-content p {
+        font-size: 20px;
+        max-width: 550px;
+    }
+
     .filters-section {
         padding: 3rem 0 2rem;
     }
@@ -229,6 +239,11 @@ body {
     
     .banner-content h1::before {
         transform: skewX(10deg);
+    }
+
+    .banner-content p {
+        font-size: 15px;
+        max-width: 450px;
     }
     
     .classes-container {
