@@ -78,13 +78,14 @@ body {
 /* Секция фильтров */
 .filters-section {
     position: relative;
+    display: flex;
+    justify-content: center
 }
 
 .filters-container {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    align-items: center;
 }
 
 .filters-list {
@@ -110,8 +111,8 @@ body {
     vertical-align: top;
     padding: 10px 15px 8px;
     margin: 0 12px 0 0;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 25px;
+    line-height: 22px;
     transition: background-color .3s linear, color .3s linear;
 }
 
