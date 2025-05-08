@@ -1,0 +1,237 @@
+/* Базовые настройки */
+@font-face {
+    font-family: 'GothemPro';
+    src: url('fonts/GothamPro-Bold.woff')  format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothemProR';
+    src: url('fonts/GothamProRBoldItalic.woff')  format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #090B11;
+    color: #FFFFFF;
+}
+
+/* Баннер секция */
+.banner-section {
+    position: relative;
+    height: 86vh;
+    background: 
+        linear-gradient(to bottom, 
+            rgba(9, 11, 17, 0.5) 0%,
+            #090B11 100%),
+        url('images/BG.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-bottom: -150px;
+}
+
+.banner-content {
+    text-align: center;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-content h1 {
+    font-family: 'GothemPro', 'Open Sans', 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 70px;
+    letter-spacing: 2px;
+    transform: skewX(-15deg);
+    display: inline-block;
+    position: relative;
+    color: #FFFFFF;
+}
+
+.banner-content h1::before {
+    content: attr(data-text);
+    position: absolute;
+    transform: skewX(15deg);
+    pointer-events: none;
+}
+
+.banner-content p {
+    font-size: 30px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    max-width: 800px;
+}
+
+/* Секция фильтров */
+.filters-section {
+    position: relative;
+}
+
+.filters-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    align-items: center;
+}
+
+.filters-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    -webkit-appearance: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    background-color: #212328;
+    border-radius: 63px;
+    font-family: 'GothemPro', 'Open Sans', 'Arial', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #4D4F53;
+    vertical-align: top;
+    padding: 10px 15px 8px;
+    margin: 0 12px 0 0;
+    font-size: 14px;
+    line-height: 18px;
+    transition: background-color .3s linear, color .3s linear;
+}
+
+.filter-btn.active {
+    background-color: #323D5E;
+    color: #FFF;
+}
+
+.filter-btn:hover {
+    color: #fff;
+}
+
+/* Секция занятий */
+.classes-section {
+    position: relative;
+    z-index: 3;
+    padding: 0 1.5rem 5rem;
+}
+
+.classes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.class-card {
+    background: #111318;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.class-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.card-content {
+    padding: 1.75rem;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.card-content p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .banner-section {
+        height: 65vh;
+    }
+    
+    .banner-content h1 {
+        font-size: 48px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-section {
+        height: 55vh;
+        margin-bottom: -40px;
+    }
+    
+    .banner-content h1 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-left: 20px;
+        transform: skewX(-12deg);
+    }
+    
+    .banner-content h1::before {
+        transform: skewX(12deg);
+    }
+    
+    .filters-section {
+        padding: 3rem 0 2rem;
+    }
+    
+    .filter-btn {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-section {
+        height: 50vh;
+    }
+    
+    .banner-content h1 {
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 1px;
+        margin-left: 15px;
+        transform: skewX(-10deg);
+    }
+    
+    .banner-content h1::before {
+        transform: skewX(10deg);
+    }
+    
+    .classes-container {
+        grid-template-columns: 1fr;
+    }
+}
