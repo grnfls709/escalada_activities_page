@@ -21,7 +21,7 @@
 
 body {
     font-family: 'Open Sans', 'Arial', sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     background: #090B11;
     color: #FFFFFF;
 }
@@ -47,13 +47,14 @@ body {
     max-width: 800px;
     position: relative;
     z-index: 1;
+    padding-bottom: 100px;
 }
 
 .banner-content h1 {
     font-family: 'GothemPro', 'Open Sans', 'Arial', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 70px;
+    font-size: 75px;
     letter-spacing: 2px;
     transform: skewX(-15deg);
     display: inline-block;
@@ -137,8 +138,8 @@ body {
     max-width: 1550px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.6rem;
 }
 
 .class-card {
