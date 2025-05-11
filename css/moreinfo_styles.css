@@ -121,6 +121,8 @@ body {
     line-height: 1.8;
     opacity: 0.9;
     text-align: left;
+    white-space: pre-line;
+    word-break: break-word;
 }
 
 .details-box {
